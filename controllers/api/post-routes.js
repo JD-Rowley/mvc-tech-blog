@@ -1,9 +1,17 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 
 // get all posts
 router.get('/', (req, res) => {
-    Post.findAll()
+    console.log('======================')
+    Post.findAll({
+        attributes: [
+            'id',
+            'post_url',
+            'title',
+            'created_at'
+        ],
+    })
         .then(dbPostData => res.json(dbPostData))
         .catch(err => {
             console.log(err);
