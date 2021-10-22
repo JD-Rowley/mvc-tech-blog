@@ -1,13 +1,4 @@
-<article class="card m-3">
-    <div class="card-header bg-light d-flex flex-wrap align-items-center">
-        <span class="d-flex col-5"><h3>{{post.title}}</h3></span>
-        <span class="d-flex col-7 justify-content-end">Posted by {{post.user.username}} at {{post.created_at}}</span>
-    </div>
-    <div class="card-body">
-        {{post.post_body}}
-    </div>
-    <div class="card-footer"></div>
-</article>
+{{> post-comments post}}
 
 <form class="form-floating m-5 text-center comment-form">
     {{#if loggedIn}}
@@ -24,22 +15,7 @@
     {{/if}}
 </form>
 
-<div class="comments m-5">
-    <p>{{post.comments.length}} comment(s)</p>
-    {{#each post.comments}}
-    <section class="card my-4 comment">
-        <div class="card-header meta">
-            {{user.username}}
-        </div>
-        <div class="card-body text">
-            {{comment_text}}
-        </div>
-        <div class="card-footer">
-            on {{created_at}}
-        </div>
-    </section>
-    {{/each}}
-</div>
+{{> comments post.comments}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
