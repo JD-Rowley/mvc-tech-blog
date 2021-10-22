@@ -1,18 +1,20 @@
-<ol>
-    {{#each posts as |post|}}
-    <li>
-        <article class="card m-3">
-            <div class="card-header bg-light d-flex justify-content-between">
-                <span class="align-middle fs-4"><a href="{{post.title}}" target="_blank">{{post.title}}</a></span>
-                <span class="fw-lighter">Posted by {{post.user.username}} at {{post.created_at}}</span>
-            </div>
-            <div class="card-body">
-                {{post.post_body}}
-            </div>
-            <div class="card-footer d-flex justify-content-end p-1 px-3">
-                <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-            </div>
-        </article>
-    </li>
-    {{/each}}
-</ol>
+<main class="row m-4">
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            <article class="card m-3">
+                <div class="card-header bg-light d-flex flex-wrap align-items-center">
+                    <span class="d-flex col-5 text-decoration-none"><a href="{{post.title}}" target="_blank"><h3>{{post.title}}</h3></a></span>
+                    <span class="d-flex col-7 justify-content-end">Posted by {{post.user.username}} at {{post.created_at}}</span>
+                </div>
+                <div class="card-body">
+                    {{post.post_body}}
+                </div>
+                <div class="card-footer d-flex justify-content-end p-1 px-3">
+                    <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+                </div>
+            </article>
+        </li>
+        {{/each}}
+    </ol>
+</main>

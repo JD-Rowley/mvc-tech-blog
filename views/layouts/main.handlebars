@@ -11,19 +11,23 @@
 
 <body>
     <div class="container-fluid">
-        <header class="row align-items-center bg-light p-4">
-            <h1 class="col-12">
-                <a href="/">The Tech Blog</a>
-            </h1>
+        <header class="row d-flex flex-wrap align-items-center bg-light px-4 py-3">
+            <a href="/" class="d-flex col-6 text-decoration-none"><h1>The Tech Blog</h1></a>
+            <nav class="d-flex col-6 justify-content-end">
+                <a href="/login" class="btn btn-outline-primary me-2">Login</a>
+                <button type="button" id="logout" class="btn btn-primary me-2">Logout</button>
+            </nav>
         </header>
-        <main class="row m-4">
+    </div>
+    <div class="container page-content">
             {{{ body }}}
-        </main>
+    </div>
+    <div class="container-fluid">
         <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
             Thanks for Visiting!
         </footer>
     </div>
-
+    <script src="/javascript/logout.js"></script>
 </body>
 
 </html>
