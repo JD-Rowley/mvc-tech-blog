@@ -1,0 +1,31 @@
+<article>
+    <a href="/dashboard"> &larr; Back to Dashboard</a>
+    <h2 class="my-3">
+        Edit Post
+    </h2>
+    <form>
+        <div class="form-floating">
+            <input type="text" class="form-control" name="post-title" id="post-title" style="width: 500px;" value="{{post.title}}" />
+            <label for="post-title">Title</label>
+        </div>
+        <div>
+            <textarea name="post-body" class="form-control my-3" value="{{post_body}}"></textarea>
+        </div>
+        <div>
+            by you on {{format_date post.created_at}} | {{post.comments.length}} {{format_plural "comment" post.comments.length}}
+        </div>
+        <button type="submit" class="btn btn-primary my-3">Save Post</button>
+        <button type="button" class="btn btn-danger m-3">Delete Post</button>
+    </form>
+</article>
+
+<form class="form-floating m-5 text-center comment-form">
+    <div>
+        <textarea name="comment-body" class="form-control my-3" placeholder="Comments"></textarea>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Add Comment</button>
+    </div>
+</form>
+
+{{> comments post.comments}}

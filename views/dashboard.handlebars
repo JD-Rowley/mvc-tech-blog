@@ -1,0 +1,32 @@
+<section class="form-floating">
+    <h2>Create a New Post</h2>
+
+    <form class="form-signin new-post-form">
+        <div class="form-floating">
+            <input type="text" class="form-control" name="post-title" id="post-title" style="width: 500px;" />
+            <label for="post-title">Title</label>
+        </div>
+        <div>
+            <textarea name="post-body" class="form-control my-3" placeholder="Message"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </form>
+</section>
+
+{{#if posts.length}}
+<section class="m-4">
+    <h2>Your Posts</h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post }}
+            <a href="/dashboard/edit/{{post.id}}" class="btn btn-primary mx-3">Edit Post</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>

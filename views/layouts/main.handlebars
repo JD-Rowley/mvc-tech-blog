@@ -15,6 +15,7 @@
             <a href="/" class="d-flex col-6 text-decoration-none"><h1>The Tech Blog</h1></a>
             <nav class="d-flex col-6 justify-content-end">
                 {{#if loggedIn}}
+                <a href="/dashboard" class="btn btn-primary me-2">Dashboard</a>
                 <button type="button" id="logout" class="btn btn-primary me-2">Logout</button>
                 {{else}}
                 <a href="/login" class="btn btn-outline-primary me-2">Login</a>
