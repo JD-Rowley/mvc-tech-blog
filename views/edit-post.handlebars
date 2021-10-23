@@ -1,6 +1,6 @@
 <article>
     <a href="/dashboard"> &larr; Back to Dashboard</a>
-    <h2 class="my-3">
+    <h2 class="my-3 text-body">
         Edit Post
     </h2>
     <form class="edit-post-form">
@@ -11,10 +11,10 @@
         <div>
             <textarea name="post-body" class="form-control my-3" value="{{post_body}}"></textarea>
         </div>
-        <div>
+        <div class="text-body">
             by you on {{format_date post.created_at}} | {{post.comments.length}} {{format_plural "comment" post.comments.length}}
         </div>
-        <button type="submit" class="btn btn-primary my-3">Save Post</button>
+        <button type="submit" class="btn btn-main my-3">Save Post</button>
         <button type="button" class="btn btn-danger delete-post-btn m-3">Delete Post</button>
     </form>
 </article>
@@ -24,7 +24,7 @@
         <textarea name="comment-body" class="form-control my-3" placeholder="Comments"></textarea>
     </div>
     <div>
-        <button type="submit" class="btn btn-primary">Add Comment</button>
+        <button type="submit" class="btn btn-main">Add Comment</button>
     </div>
 </form>
 

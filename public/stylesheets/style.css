@@ -1,6 +1,19 @@
+:root {
+    --primary: #365194;
+    --secondary: #7587B4;
+    --tertiary: #253354;
+    --light: #F2F3F4;
+}
 * {
     font-family: Arial;
     box-sizing: border-box;
+    color: white;
+}
+body {
+    background-color: var(--light);
+}
+header {
+    background-color: var(--primary);
 }
 .page-content {
     height: 100%;
@@ -11,4 +24,18 @@
     max-width: 500px;
     vertical-align: middle;
     margin: auto;
+}
+.card-header,
+.card-footer {
+    background-color: var(--secondary);
+}
+li {
+    color: black;
+}
+.btn-main {
+    background-color: var(--tertiary);
+    color: white;
+}
+.btn-main:hover {
+    background-color: var(--secondary);
 }

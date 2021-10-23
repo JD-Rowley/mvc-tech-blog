@@ -1,11 +1,11 @@
 <div class="comments m-5">
-    <p>{{this.length}} {{format_plural "comment" this.length}}</p>
+    <p class="text-body">{{this.length}} {{format_plural "comment" this.length}}</p>
     {{#each this}}
     <section class="card my-4 comment">
         <div class="card-header meta">
             {{user.username}}
         </div>
-        <div class="card-body text">
+        <div class="card-body text-body">
             {{comment_text}}
         </div>
         <div class="card-footer">

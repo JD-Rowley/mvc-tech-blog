@@ -11,14 +11,14 @@
 
 <body>
     <div class="container-fluid">
-        <header class="row d-flex flex-wrap align-items-center bg-light px-4 py-3">
-            <a href="/" class="d-flex col-6 text-decoration-none"><h1>The Tech Blog</h1></a>
+        <header class="row d-flex flex-wrap align-items-center px-4 py-3">
+            <a href="/" class="d-flex col-6 text-reset text-decoration-none"><h1>The Tech Blog</h1></a>
             <nav class="d-flex col-6 justify-content-end">
                 {{#if loggedIn}}
-                <a href="/dashboard" class="btn btn-primary me-2">Dashboard</a>
-                <button type="button" id="logout" class="btn btn-primary me-2">Logout</button>
+                <a href="/dashboard" class="btn btn-main me-2">Dashboard</a>
+                <button type="button" id="logout" class="btn btn-main me-2">Logout</button>
                 {{else}}
-                <a href="/login" class="btn btn-outline-primary me-2">Login</a>
+                <a href="/login" class="btn btn-main me-2">Login</a>
                 {{/if}}
             </nav>
         </header>
@@ -27,7 +27,7 @@
             {{{ body }}}
     </div>
     <div class="container-fluid">
-        <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+        <footer class="d-flex flex-wrap justify-content-center align-items-center text-body py-3 my-4 border-top">
             Thanks for Visiting!
         </footer>
     </div>
