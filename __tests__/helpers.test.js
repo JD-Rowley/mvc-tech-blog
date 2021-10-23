@@ -1,4 +1,4 @@
-const {format_date, format_plural} = require('../utils/helper');
+const {format_date, format_plural, format_time} = require('../utils/helper');
 
 test('format_date() returns a date string', () => {
     const date = new Date('2021-10-22 16:12:03');
@@ -13,3 +13,9 @@ test('format_plural() returns a pluralized word', () => {
     expect(word1).toBe('tiger');
     expect(word2).toBe('lions');
 })
+
+test('format_time() returns a time string', () => {
+    const time = new Date('2021-10-22 16:12:03');
+
+    expect(format_time(time)).toBe('4:12 PM');
+});
