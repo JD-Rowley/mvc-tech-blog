@@ -12,7 +12,7 @@ module.exports = {
         return `${new Date(time).toLocaleTimeString('en-US', {
             hour: 'numeric',
             minute: 'numeric',
-            timeZone: 'America/Phoenix'
+            timeZone: 'America/Boise'
         })}`;
     }
 }
