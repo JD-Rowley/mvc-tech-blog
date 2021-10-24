@@ -39,6 +39,7 @@ li {
 .btn-main:hover {
     background-color: var(--secondary);
 }
-.post-main {
+.post-main,
+.comment-main {
     white-space: pre-wrap;
 }
