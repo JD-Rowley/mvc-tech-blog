@@ -9,7 +9,9 @@ async function deleteFormHandler(event) {
         method: "DELETE"
     });
     if (response.ok) {
-        document.location.replace('/dashboard/');
+        if (confirm("Are you sure you want to delete this post?")) {
+            document.location.replace('/dashboard/');
+        }
     } else {
         alert(response.statusText);
     }

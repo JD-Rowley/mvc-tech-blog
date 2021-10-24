@@ -29,6 +29,8 @@ router.post('/', withAuth, (req, res) => {
     }
 });
 
+// wanted to implement, but ran out of time
+
 // update comment
 // router.put('/:id', (req, res) => {
 //     Comment.update(req.body, {

@@ -10,6 +10,9 @@
         </div>
         <div class="card-footer">
             on {{format_date created_at}} at {{format_time created_at}}
+            {{#if loggedIn}}
+            <button type"button" class="btn btn-main mx-3">Edit Comment</button>
+            {{/if}}
         </div>
     </section>
     {{/each}}
