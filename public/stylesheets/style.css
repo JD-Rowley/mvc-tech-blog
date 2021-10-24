@@ -41,5 +41,6 @@ li {
 }
 .post-main,
 .comment-main {
+    padding: 0 16px;
     white-space: pre-wrap;
 }
